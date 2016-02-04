@@ -3,7 +3,7 @@ Welcome to TakeMeTour's Job Quest
 
 Thank you for your application. First, we would like to take a simple test on your JavaScript skill. 
 
-Choose to do one (or both) of frontend and backend tasks. Please fork me and submit your repository at [WantToWork@takemetour.com](mailto:WantToWork@takemetour.com) by **Monday February 7th, 2016 23:59 GMT+7**. 
+Choose to do one (or both) of frontend and backend tasks. Please fork me and submit your repository at [WantToWork@takemetour.com](mailto:WantToWork@takemetour.com) by **Monday February 8th, 2016 23:59 GMT+7**. 
 
 Frontend Task
 ---
