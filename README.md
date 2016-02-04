@@ -23,7 +23,7 @@ Frontend Task
 
 Please explain what is single-page application and how it work. Give examples of tools used to make SPAs.
 
-*<Write your answer here>*
+*\<Write your answer here>*
 
 Backend Task
 ---
@@ -48,4 +48,4 @@ Backend Task
 
 What is the difference between MongoDB and MySql?
 
-*<Write your answer here>*
+*\<Write your answer here>*
