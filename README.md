@@ -19,6 +19,12 @@ Frontend Task
 - Support mobile screen (responsive)
 - Use Browserify or Webpack
 
+**Question**
+
+Please explain what is single-page application and how it work. Give examples of tools used to make SPAs.
+
+*<Write your answer here>*
+
 Backend Task
 ---
 - Develop a simple API to serve trip information
@@ -37,3 +43,9 @@ Backend Task
 
 - Use promise instead of async callback
 - Use ES2015 syntax
+
+**Question**
+
+What is the difference between MongoDB and MySql?
+
+*<Write your answer here>*
