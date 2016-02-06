@@ -1,7 +1,7 @@
 
 
 Another web application challenge for job apply.
-you can directly open it on this url http://zapkub.github.io/#/
+you can directly open it on this url http://zapkub.github.io/takemetour-quest/
 #Front end
   http://zapkub.github.io/#/
 
