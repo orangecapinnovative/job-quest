@@ -49,3 +49,8 @@ Backend Task
 What is the difference between MongoDB and MySql?
 
 Simple answer is MongoDB store data in different way it store data as json structure record instead of table like MySql.There are a lot of different thing between these two style of database ex. MySQL is relational database and has it own SQL query syntax , Mongo is better for scalability if I need to choose database for a project I prefer MongoDB.
+
+###Comment
+This test is really fun. hope you don't mind if I did any mistake, I really passionate and confident in my javascript skill but I still have a lot of thing to learn
+
+Thanks
