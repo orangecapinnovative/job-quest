@@ -1,3 +1,18 @@
+
+
+Another web application challenge for job apply.
+you can directly open it on this url http://zapkub.github.io/#/
+#Front end
+  http://zapkub.github.io/#/
+
+#Back end
+  github is not provide an environment to run node and mongo so I deploy it to my (little) ec2 server.
+  restful (GET,POST,PUT,DELETE) : http://rungsikorn.rocks:1234/api/trips
+  
+
+
+
+
 Welcome to TakeMeTour's Job Quest
 ===
 
