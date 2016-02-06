@@ -3,7 +3,7 @@
 Another web application challenge for job apply.
 you can directly open it on this url http://zapkub.github.io/takemetour-quest/
 #Front end
-  my main skill is angular so i hope it not a problem. thanks !
+  Currently my main skill is angular so i hope it not a problem. thanks !
   http://zapkub.github.io/takemetour-quest/
 
 #Back end
