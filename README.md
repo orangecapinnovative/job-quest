@@ -3,8 +3,10 @@
 Another web application challenge for job apply.
 you can directly open it on this url http://zapkub.github.io/takemetour-quest/
 #Front end
-  Currently my main skill is angular so i hope it not a problem. thanks !
+  Currently my main skill is angular so I hope it not a problem. thanks ! ( and want to learn more awesome library!!. )
+  
   http://zapkub.github.io/takemetour-quest/
+  
 
 #Back end
   github is not provide an environment to run node and mongo so I deploy it to my (little) ec2 server.
