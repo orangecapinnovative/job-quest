@@ -23,7 +23,7 @@ Frontend Task
 
 Please explain what is single-page application and how it work. Give examples of tools used to make SPAs.
 
-*\<Write your answer here>*
+SPAs is a web application that will reload only content without full page load via resource api. There are many tools to make SPAs but the core is Javascript Ajax ( xhr ) inside a tons of js library and framework and serverside restful service.
 
 Backend Task
 ---
@@ -48,4 +48,4 @@ Backend Task
 
 What is the difference between MongoDB and MySql?
 
-*\<Write your answer here>*
+Simple answer is MongoDB store data in different way it store data as json structure record instead of table like MySql.There are a lot of different thing between these two style of database ex. MySQL is relational database and has it own SQL query syntax , Mongo is better for scalability if I need to choose database for a project I prefer MongoDB.
