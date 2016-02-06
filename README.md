@@ -7,12 +7,13 @@ you can directly open it on this url http://zapkub.github.io/takemetour-quest/
   
   http://zapkub.github.io/takemetour-quest/
   
+  SASS Autoprefixer , Gulp Webpack , CSSFlex , Babel(ES2015) , promise (instead of classic http ajax)
 
 #Back end
   github is not provide an environment to run node and mongo so I deploy it to my (little) ec2 server.
   restful (GET,POST,PUT,DELETE) : http://rungsikorn.rocks:1234/api/trips
   
-
+  Node 5.x (ES2015) , Express , Mongoose , a little promise
 
 
 
