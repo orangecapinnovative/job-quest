@@ -3,7 +3,7 @@
 Another web application challenge for job apply.
 you can directly open it on this url http://zapkub.github.io/takemetour-quest/
 #Front end
-  http://zapkub.github.io/#/
+  http://zapkub.github.io/takemetour-quest/
 
 #Back end
   github is not provide an environment to run node and mongo so I deploy it to my (little) ec2 server.
