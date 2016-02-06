@@ -1,0 +1,138 @@
+#header {
+  border-bottom: 1px #e3e3e3 solid;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 999;
+  button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+  }
+  .wrap {
+    display: flex;
+    padding: 10px 10px 10px 10px;
+    height: 75px;
+    color: #333;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    @media screen and (max-width:768px) {
+      flex-direction: column;
+      height: auto;
+    }
+    .column {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media screen and (max-width:768px) {
+        justify-content: flex-start;
+      }
+    }
+    .left {
+      flex: 0 0 auto;
+      .logo {
+        img {
+          height: 45px;
+        }
+      }
+      .search-input-container {
+        margin-left: 25px;
+        #wheretogo,
+        .default.text {
+          font-family: 'Roboto', sans-serif;
+          font-weight: 300;
+          font-size: 14px;
+        }
+        input.search {
+          font-family: 'Roboto', sans-serif;
+          font-weight: 300;
+          font-size: 14px;
+          top: 50%;
+          transform: translate(0,-50%);
+        }
+      }
+    }
+    .right {
+      flex: 1 1 auto;
+      justify-content: flex-end;
+      .open-menu{
+        cursor: pointer;
+        position: absolute;
+        top:25px;
+        right:10px;
+        padding:0;
+        color:grey;
+        font-size: 32px;
+        @media screen and (min-width: 768px){
+          display: none;
+        }
+      }
+      .menu-list {
+        @media screen and (max-width:768px) {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          z-index: 99;
+          background: rgba(255,255,255,1);
+          font-size: 38px;
+          opacity: 0;
+          top:-50%;
+          pointer-events: none;
+          transition: all 0.3s linear;
+          &.show {
+              opacity: 1;
+              top:0;
+              pointer-events: all;
+          }
+        }
+        .close-menu {
+          cursor: pointer;
+          position: absolute;
+          top:20px;
+          right:10px;
+          padding:0;
+          @media screen and (min-width: 768px){
+            display: none;
+          }
+        }
+        .signup {
+          box-shadow: inset 0 0 1px black !important;
+          &:hover {
+            color: white !important;
+            background: black !important;
+          }
+        }
+        .item {
+          margin-left: 30px;
+          @media screen and (max-width:480px) {
+            margin: 5px;
+          }
+        }
+        a {
+          color: #888;
+          font-size: 16px;
+          padding: 5px;
+          font-family: 'Roboto', sans-serif;
+          font-weight: 300;
+          @media screen and (max-width:768px) {
+              font-size: 32px;
+              padding:40px;
+          }
+        }
+        button{
+          @media screen and (max-width:768px) {
+              font-size: 38px;
+          }
+        }
+      }
+      @media screen and (max-width:768px) {
+        justify-content: center;
+      }
+    }
+  }
+}

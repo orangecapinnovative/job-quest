@@ -1,0 +1,38 @@
+<div class="header" id="header">
+  <div class="wrap row">
+    <div class="left column">
+      <div class="logo">
+        <a href="#/">
+          <img src="assets/images/logo.png">
+        </a>
+      </div>
+      <div class="search-input-container">
+
+        <div class="ui fluid search selection dropdown">
+          <input name="wheretogo" type="hidden">
+          <i class="dropdown icon"></i>
+          <div class="default text">
+            <i class="search icon"></i>Where to go?</div>
+          <div class="menu">
+            <div class="item" data-value="af">
+              Bangkok</div>
+            <div class="item" data-value="ax">
+              Chonburi</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="right column">
+      <a class="open-menu" ng-click="showMenu = !showMenu"><i class="icon sidebar"></i></a>
+      <div class="menu-list" ng-class="{'show':showMenu}">
+        <a class="close-menu" ng-click="showMenu = !showMenu"><i class="icon close"></i></a>
+        <button class="item ui black signup basic button">Sign up</button>
+        <a class="item" href="#">
+          Log in</a>
+        <a class="item" href="#">How it works</a>
+        <button class="item ui button" style="background:#1eb6e7;color:white;">List your trip</button>
+      </div>
+    </div>
+  </div>
+</div>

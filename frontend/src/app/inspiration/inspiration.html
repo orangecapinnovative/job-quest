@@ -1,0 +1,28 @@
+<div id="inspiration" data-anim-sync class="anim-slide-below-fade">
+  <div class="wrap" ng-repeat="item in inspiration.data">
+    {{item.inspiration_id.thumbnail_media_id._id}}
+    <div class="ui header">
+      {{item.inspiration_id.name}}
+    </div>
+    <div class="">
+      {{item.inspiration_id.description}}
+    </div>
+    <div class="ui header">
+      Trip list
+    </div>
+    <div class="ui list" ng-repeat="location in item.inspiration_id.locations">
+    <div class="item">
+        <div class="ui header">
+          {{location.name}}
+        </div>
+        <div class="ui list">
+          {{(location.trip_ids.length) ? '':'ไม่มีทริปจ้ะ'}}
+          <div class="item" ng-repeat="trip in location.trip_ids">
+            {{trip}}
+          </div>
+        </div>
+    </div>
+
+    </div>
+  </div>
+</div>

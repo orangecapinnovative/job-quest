@@ -1,0 +1,146 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+body{
+  font-family: 'Roboto', sans-serif !important;
+}
+input{
+  font-family: 'Roboto', sans-serif !important;
+  font-size:14px;
+}
+
+#main{
+  position: absolute;
+  width:100%;
+  padding-bottom: 50px;
+  .see-all {
+    background:#e96a1e;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    margin:auto;
+    display: block;
+    font-size:12px;
+    padding:15px 30px 13px 30px;
+  }
+  .some-awesome-intro{
+    color:#555;
+    width:100%;
+    padding-top:60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (max-width:480px){
+      padding:20px;
+    }
+    h1{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 100;
+      font-size: 38px;
+      color:#ea782a;
+
+    }
+    p{
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
+  }
+
+  .gallery{
+    padding:50px;
+    max-width: 1024px;
+    margin:auto;
+    @media screen and (max-width:480px){
+      padding:10px;
+    }
+    .row {
+      width:100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      .item{
+        box-sizing: border-box;
+        padding:5px;
+        overflow: hidden;
+        .wrap{
+          position: relative;
+          overflow: hidden;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .thumbnail{
+            width: 100%;
+            display: block;
+          }
+          .name{
+            transform: translate(-50%,-50%);
+            top:50%;
+            left:50%;
+            width:100%;
+            text-align: center;
+            font-size:22px;color:white;
+            position: absolute;
+          }
+          @media screen and (max-width:768px){
+            height:150px;
+            .thumbnail {
+              width:200%;
+            }
+          }
+        }
+
+        @media screen and (min-width:768px){
+          &.col-1{
+            width:33%;
+          }
+          &.col-2{
+            width:66%;
+          }
+        }
+        @media screen and (max-width:768px){
+          &.col-1{
+            width:100%;
+          }
+          &.col-2{
+            width:100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+#inspiration{
+  position: absolute;
+  width:100%;
+  min-height: 100%;
+  margin-top:95px;
+  top:0;
+  padding:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wrap{
+    max-width: 768px;
+  }
+}
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
