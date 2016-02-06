@@ -12,6 +12,10 @@ export function routerConfig($stateProvider, $urlRouterProvider) {
         }
       }
     })
+    .state('allInspiration',{
+      url:'/inspirations',
+      templateUrl: 'app/inspiration/all.html'
+    })
     .state('inspiration', {
       url: '/inspiration/:_id',
       templateUrl: 'app/inspiration/inspiration.html',

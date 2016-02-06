@@ -1,1 +1,5 @@
 backend/node_modules
+
+frontend/.tmp/partials/templateCacheHtml.js
+
+*.DS_Store
