@@ -3,6 +3,7 @@ import reactMixin from 'react-mixin';
 import RouterMixin from 'react-mini-router';
 import InspirationsComponent from './home'
 import InspirationDetailComponent from './InspirationDetail'
+
 var ContentComponent = React.createClass({
     mixins: [RouterMixin.RouterMixin],
     routes: {
