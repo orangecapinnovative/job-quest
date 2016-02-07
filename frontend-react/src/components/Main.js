@@ -2,10 +2,8 @@ require('normalize.css');
 require('styles/main.scss');
 require('styles/Header.scss');
 import React from 'react';
-import reactMixin from 'react-mixin';
-import RouterMixin from 'react-mini-router';
 import jQuery from 'jquery';
-
+import ContentComponent from './Routing'
 let yeomanImage = require('../images/yeoman.png');
 class AppComponent extends React.Component {
   render() {
@@ -100,77 +98,7 @@ class HeaderComponent extends React.Component {
 );
   }
 }
-var ContentComponent = React.createClass({
-    mixins: [RouterMixin.RouterMixin],
-    routes: {
-        '/': 'home',
-        '/trip/:id': 'trip'
-    },
-    render: function() {
-        return this.renderCurrentRoute();
-    },
-    home: function() {
-        return <div><InspirationComponent></InspirationComponent></div>;
-    },
-    trip: function(id) {
-        return <div></div>;
-    },
-    notFound: function(path) {
-        return <div class="not-found">Page Not Found: {path}</div>;
-    }
-});
-
-var InspirationComponent = React.createClass({
-  getInitialState:function(){
-    return { };
-  },
-  componentDidMount: function() {
-    this.serverRequest = jQuery.get(
-      'https://www.takemetour.com/api/home',
-      function(res){
-        this.setState({
-          inspiration_layouts:res.inspiration_layouts
-        })
-      }.bind(this)
-    );
-  },
-  componentWillUnmount: function() {
-    this.serverRequest.abort();
-  },
-  render:function(){
-    if (!this.state.inspiration_layouts){
-      return <div>No data</div>;
-    }
-    return (
-      <div className="gallery">
-        {
-          this.state.inspiration_layouts.map((row,i)=>{
-            return (
-              <div className="row" key={i}>
-                {
-                  row.columns.map((inspriation,index)=>{
-                    let item = inspriation.inspiration_id;
-                    return <div className={'item col-'+inspriation.size} key={index}>
-                      <a href={'#/inspiration/'+inspriation._id}>
-                        <div className="wrap">
-                          <div className="name">
-                            {item.name}
-                          </div>
-                          <img className='thumbnail' src={'images/'+item.thumbnail_media_id.file_name} />
-
-                        </div>
-                      </a>
-                    </div>
-                  })
-                }
-              </div>
-            )
-          })
-        }
-      </div>
-    );
-  }
-})
+//Routing
 
 
 
