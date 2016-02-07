@@ -2,12 +2,15 @@
 
 Another web application challenge for job apply.
 you can directly open it on this url http://zapkub.github.io/takemetour-quest/
+
+and react at   http://zapkub.github.io/takemetour-quest-react/#/
 #Front end
   Currently my main skill is angular so I hope it not a problem. thanks ! ( and want to learn more awesome library!!. )
   
   update : I add another app create by React ,btw code style isn't look nice coz I m not use it as my main library
   
   http://zapkub.github.io/takemetour-quest/
+  
   http://zapkub.github.io/takemetour-quest-react/#/
   
   SASS Autoprefixer , Gulp Webpack , CSSFlex , Babel(ES2015) , promise (instead of classic http ajax)
