@@ -3,7 +3,7 @@ Welcome to TakeMeTour's Job Quest
 
 Thank you for your application. First, we would like to take a simple test on your JavaScript skill. 
 
-Choose to do one (or both) of frontend and backend tasks. Please fork me and submit your repository at [WantToWork@takemetour.com](mailto:WantToWork@takemetour.com) by **Monday February 8th, 2016 23:59 GMT+7**. 
+Choose to do one (or both) of frontend and backend tasks. Please fork me and reply the email sent to you (Subject: `TakeMeTour: JavaScript Engineer Application`) when you are finished.
 
 Frontend Task
 ---
@@ -18,6 +18,7 @@ Frontend Task
 - Write the stylesheet in SASS
 - Support mobile screen (responsive)
 - Use Browserify or Webpack
+- Surprise me!
 
 **Question**
 
@@ -43,6 +44,7 @@ Backend Task
 
 - Use promise instead of async callback
 - Use ES2015 syntax
+- Surprise me!
 
 **Question**
 
