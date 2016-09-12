@@ -1,53 +1,18 @@
-Welcome to TakeMeTour's Job Quest
+Welcome to TakeMeTour's Job Quest (Autumn 2016 Edition)
 ===
 
-Thank you for your application. First, we would like to take a simple test on your JavaScript skill. 
+Thank you for your interest in working at TakeMeTour. First, we would like to take a simple test on your coding skill.
 
-Choose to do one (or both) of frontend and backend tasks. Please fork me and reply the email sent to you (Subject: `TakeMeTour: JavaScript Engineer Application`) when you are finished.
+Please fork this repo and work on the test. After finishing the test, please send your repo to WantToWork@takemetour.com (Subject: `Full-stack JavaScript Engineer Application (Autumn 2016)`).
 
-Frontend Task
+TODO:
 ---
-![Designed page](https://raw.github.com/PanJ/job-quest/master/frontend/design.png)
-
-- Given the [designed page](https://raw.github.com/PanJ/job-quest/master/frontend/design.png), please write HTML and CSS accordingly
-- Font used is [Roboto](https://www.google.com/fonts#UsePlace:use/Collection:Roboto)
-- Please take a look at API [https://www.takemetour.com/api/home](https://www.takemetour.com/api/home) and use data from the API to display the inspiration section using JavaScript
-
-**Bonus points**
-
-- Write the stylesheet in SASS
-- Support mobile screen (responsive)
-- Use Browserify or Webpack
-- Surprise me!
-
-**Question**
-
-Please explain what is single-page application and how it work. Give examples of tools used to make SPAs.
-
-*\<Write your answer here>*
-
-Backend Task
----
-- Develop a simple API to serve trip information
-- API endpoints consists of
-  - `GET /trips` list all trips (only trip `name` and `_id`)
-  - `POST /trips` create new trip
-  - `GET /trips/:id` get trip detail (all fields)
-  - `PUT /trips/:id` update trip
-  - `DELETE /trips/:id` delete trip
-- Trip data consists of
-  - `String` name
-  - `Number` price
-  - `String` description
-
-**Bonus points**
-
-- Use promise instead of async callback
-- Use ES2015 syntax
-- Surprise me!
-
-**Question**
-
-What is the difference between MongoDB and MySql?
-
-*\<Write your answer here>*
+- Please run this repo using `npm run build & npm start` command.
+- Go to `http://localhost:3000` and explore what the project is about.
+- Walk through the project's source code.
+- Bad-written, isn't it? **It's your job to refactor the code!**
+- Refactoring hints:
+  - The code's structure does not have to be the same. Freedom is yours.
+  - Implemented features should have same behavior but enhancements are welcome. (e.g. input validation)
+  - Local CSS (CSS Module) is preferred.
+  - It looks like the code is not in the strict format. Please do something to make sure that everyone in the team is writing code in the same format.
