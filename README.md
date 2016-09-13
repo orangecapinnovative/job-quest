@@ -7,6 +7,7 @@ Please fork this repo and work on the test. After finishing the test, please sen
 
 TODO:
 ---
+- Install dependencies using `npm install`
 - Please run this repo using `npm run build & npm start` command.
 - Go to `http://localhost:3000` and explore what the project is about.
 - Walk through the project's source code.
