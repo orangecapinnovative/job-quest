@@ -9,8 +9,9 @@ var webpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config.js');
 
 
-gulp.task('serve', ['compile'], function() {
 
+gulp.task('serve', ['compile','webpack'], function() {
+  gulp.watch(['./src/**/*.ts*'],['compile']);
   nodemon({
     args: [],
     ignore: [],
@@ -23,7 +24,7 @@ gulp.task('serve', ['compile'], function() {
     script: `server.js`,
     ext: 'ts tsx js html'
   });
-
+  
 });
 
 gulp.task('webpack', function(){
@@ -33,7 +34,7 @@ gulp.task('webpack', function(){
 })
 gulp.task('compile', function() {
   var tsProject = ts.createProject('./tsconfig.json');
-  return gulp.src([`./src/**/*.ts`], {
+  return gulp.src([`./src/**/*.ts*`], {
       base: 'src/'
     })
     .pipe(changed('./dist'), {
