@@ -1,4 +1,4 @@
-require('normalize.css');
+  require('normalize.css');
 require('styles/main.scss');
 require('styles/Header.scss');
 import React from 'react';
