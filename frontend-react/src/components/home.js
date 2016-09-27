@@ -32,7 +32,7 @@ var InspirationsComponent = React.createClass({
                   row.columns.map((inspriation,index)=>{
                     let item = inspriation.inspiration_id;
                     return <div className={'item col-'+inspriation.size} key={index}>
-                      <a href={'inspiration/'+inspriation._id}>
+                      <a href={'#!/inspiration/'+inspriation._id}>
                         <div className="wrap">
                           <div className="name">
                             {item.name}
