@@ -1,0 +1,18 @@
+{
+  "globalDependencies": {
+    "body-parser": "registry:dt/body-parser#0.0.0+20160619023215",
+    "express": "registry:dt/express#4.0.0+20160317120654",
+    "express-serve-static-core": "registry:dt/express-serve-static-core#0.0.0+20160701212727",
+    "history": "registry:dt/history#1.8.0+20160316155526",
+    "mime": "registry:dt/mime#0.0.0+20160316155526",
+    "mongodb": "registry:dt/mongodb#2.1.0+20160602142941",
+    "mongoose": "registry:dt/mongoose#4.5.9+20160922172925",
+    "node": "registry:dt/node#6.0.0+20160925070332",
+    "react": "registry:dt/react#0.14.0+20160621225615",
+    "redux": "registry:dt/redux#3.3.1+20160326112656",
+    "redux-actions": "registry:dt/redux-actions#0.8.0+20160521154116",
+    "redux-logger": "registry:dt/redux-logger#2.6.0+20160619033847",
+    "redux-thunk": "registry:dt/redux-thunk#2.0.1+20160317120654",
+    "serve-static": "registry:dt/serve-static#0.0.0+20160606155157"
+  }
+}
