@@ -1,0 +1,19 @@
+.container {
+    margin-top: 20px;
+    padding: 5px 5px;
+    border-top : 1px lightgrey solid;
+
+
+    .title {
+        font-size: 34px;
+        font-weight: bold;
+    }
+    ul {
+        padding: 0;
+    }
+    .noTodo {
+        margin:50px auto;
+        text-align: center;
+        color:lightgrey;
+    }
+}

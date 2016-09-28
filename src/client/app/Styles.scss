@@ -1,0 +1,41 @@
+
+:global {
+    #mount-point {
+        opacity: 1;
+        transition: 0.22s opacity linear;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    *:focus{
+        outline: none;
+    }
+}
+
+.container{
+    margin:auto;
+    width: 480px;
+
+    
+    input[type="text"] {
+        padding: 10px 15px;
+        border:1px lightgrey solid;
+        border-radius: 5px;
+        margin: 0 5px;
+    }
+
+
+    button {
+        cursor: pointer;
+        background: white;
+        padding: 5px 15px;
+        border-radius: 5px;
+        margin: 0 5px;
+        border: lightgrey solid 1px;
+        &:hover{
+            background:lightgrey;
+            color:white;
+        }
+    }
+}
+

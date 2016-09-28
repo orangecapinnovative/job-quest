@@ -1,0 +1,15 @@
+.container{
+    padding: 5px 10px;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background:lighten(lightgrey, 20);
+    margin:5px 0;
+    border-bottom: 1px lightgrey solid;
+    &:nth-last-child(1){
+        border:none;
+    }
+}
