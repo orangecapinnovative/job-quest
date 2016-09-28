@@ -31,14 +31,15 @@ function handlerFactory() {
     },
     remove: async (req, res) => {
       const params = req.params as {id: string};
-      try{
+      try {
         await Todo.remove({_id: params.id}).exec();
         res.status(200).json({payload: 'Success'});
-      } catch(e){
+      } catch (e) {
         res.status(500).send(e.toString());
       }
-      
+
     },
+
     /** 
      * Toogle Todo 
      * by id in url 
@@ -58,19 +59,21 @@ function handlerFactory() {
       } else {
         res.status(404);
       }
-    }
-  }
+    },
+  };
 }
 
 
 export function Router() {
+
   const router = express.Router();
 
   router.get('/', handlerFactory().query);
   router.post('/', handlerFactory().add);
   router.put('/:id/toggle', handlerFactory().toogle);
-  router.delete('/:id',handlerFactory().remove);
+  router.delete('/:id', handlerFactory().remove);
   return router;
+
 }
 
 

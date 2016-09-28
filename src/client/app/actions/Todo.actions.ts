@@ -10,25 +10,25 @@ export const reloadTodo = () => async (dispatch) => {
   dispatch({
     type: RELOAD_TODO,
     payload: data.payload,
-  })
-}
+  });
+};
 
 export const toggleTodoById = (id: number) => async (dispatch) => {
     const data = await TodoAgent.toggle(id);
     dispatch(reloadTodo());
-}
+};
 
 export const deleteTodoById = (id: number) => async (dispatch) => {
   const data = await TodoAgent.delete(id);
   dispatch(reloadTodo());
-}
+};
 
 export const createTodo = (title: string) => async (dispatch) => {
 
   const data = await TodoAgent.add(title);
-  if(data.payload === 'Success')
+  if (data.payload === 'Success') {
     dispatch(reloadTodo());
-  else {
+  } else {
     alert(' Add failed' );
   }
-}
+};

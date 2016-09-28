@@ -6,10 +6,10 @@ import * as TodoActions from '../actions/Todo.actions';
 
 interface TodoFormPropsType {
   addNewTodo(title: string): void;
-  reload():void;
+  reload(): void;
 }
-class TodoForm extends React.Component<TodoFormPropsType, {value: string}>{
-  constructor(props){
+class TodoForm extends React.Component<TodoFormPropsType, {value: string}> {
+  constructor(props) {
     super(props);
     this.state = { value: ''};
   }
@@ -26,14 +26,14 @@ class TodoForm extends React.Component<TodoFormPropsType, {value: string}>{
     });
   }
   handlerEnter(e) {
-     if ('Enter' == e.key ) {
+     if ('Enter' === e.key ) {
        this.handlerAddTodo(e);
     }
   }
-  render(){
+  render() {
     return (
       <div>
-        <input onKeyPress={this.handlerEnter.bind(this)} ref='input' type="text" value={this.state.value} placeholder='Type something' onChange={this.onChange.bind(this)} />
+        <input onKeyPress={this.handlerEnter.bind(this)} ref='input' type='text' value={this.state.value} placeholder='Type something' onChange={this.onChange.bind(this)} />
         <button onClick={this.handlerAddTodo.bind(this)}> {`Add`} </button>
         <button onClick={this.props.reload}> {`Refresh`} </button>
       </div>
@@ -43,9 +43,9 @@ class TodoForm extends React.Component<TodoFormPropsType, {value: string}>{
 
 const mapState = (state: AppState) => (
   {
-    
+
   }
-)
+);
 const mapDispatch = (dispatch) => (
   {
     addNewTodo: (title: string) => {
@@ -53,8 +53,8 @@ const mapDispatch = (dispatch) => (
     },
     reload: () => {
       dispatch(TodoActions.reloadTodo());
-    }
+    },
   }
-)
+);
 
 export default connect(mapState, mapDispatch)(TodoForm);

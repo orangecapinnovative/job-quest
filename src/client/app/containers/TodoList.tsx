@@ -7,15 +7,15 @@ const styles = require('./TodoList.scss');
 
 interface TodoListPropsType {
   todos: ITodo[];
-  reload():void;
+  reload(): void;
   handleDelete(id: number): void;
   handleToggle(id: number): void;
 }
-class TodoList extends React.Component<TodoListPropsType, {}>{
-  componentDidMount(){
+class TodoList extends React.Component<TodoListPropsType, {}> {
+  componentDidMount() {
     this.props.reload();
   }
-  render(){
+  render() {
     return (
       <div className={styles.container}>
         <div className={styles.title}>
@@ -36,9 +36,9 @@ class TodoList extends React.Component<TodoListPropsType, {}>{
 
 const mapState = (state: AppState) => (
   {
-    todos: state.todo.todos
+    todos: state.todo.todos,
   }
-)
+);
 const mapDispatch = (dispatch) => (
   {
     reload: () => {
@@ -49,8 +49,8 @@ const mapDispatch = (dispatch) => (
     },
     handleDelete: (id) => {
       dispatch(TodoActions.deleteTodoById(id));
-    }
+    },
   }
-)
+);
 
 export default connect(mapState, mapDispatch)(TodoList);

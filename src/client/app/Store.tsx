@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 import { todo } from './reducers/Todo.reducers';
 
 const Store = createStore<any>(combineReducers<AppState>({ todo }), {
-  todo: { todos: [] }
+  todo: { todos: [] },
 }, compose(
   applyMiddleware(thunk)));
 

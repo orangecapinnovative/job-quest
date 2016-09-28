@@ -28,19 +28,19 @@ function handlerFactory() {
   return {
     view: function (req: express.Request, res: express.Response) {
       res.send(renderTemplate(renderToString(
-      <Provider store={Store}> 
+      <Provider store={Store}>
         <App />
       </Provider>
       )));
-    }
-  }
+    },
+  };
 }
 
 
 export function Router() {
   const router = express.Router();
 
-  router.get('/',handlerFactory().view);
+  router.get('/', handlerFactory().view);
 
 
   return router;

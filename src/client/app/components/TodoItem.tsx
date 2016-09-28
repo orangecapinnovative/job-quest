@@ -16,4 +16,4 @@ export default (props: TodoItemProps) => (
 
     <button onClick={() => props.onDelete(props._id)}>Delete</button>
   </li>
-)
+);
