@@ -12,6 +12,9 @@ const renderTemplate = (HTML?) => `
 <html>
   <head>
     <title>Todo App</title>
+    <style>
+      #mount-point { opacity:0; }
+    </style>
   </head>
   <body>
     <div id="mount-point">${HTML}</div>

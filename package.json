@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "PRODUCTION=true node server.js",
+    "dev": "PORT=2999 gulp serve",
+    "start": "node server.js",
     "build": "gulp build"
   },
   "repository": {
@@ -46,8 +47,11 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
     "babel-preset-stage-3": "^6.11.0",
+    "babel-runtime": "^6.11.6",
     "css-loader": "^0.25.0",
+    "css-modules-require-hook": "^4.0.3",
     "file-loader": "^0.9.0",
+    "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-changed": "^1.3.1",
     "gulp-clean": "^0.3.2",
@@ -56,6 +60,10 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-typescript": "^2.13.6",
     "gulp-util": "^3.0.7",
+    "node-sass": "^3.10.0",
+    "postcss-loader": "^0.13.0",
+    "postcss-modules": "^0.5.2",
+    "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "ts-loader": "^0.8.2",
     "typescript": "^2.0.3",

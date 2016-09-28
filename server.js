@@ -1,7 +1,2 @@
 var server = require('./dist/entry.js');
-
-if(!process.env.PRODUCTION) {
-  server.start(2999);
-} else {
-  server.start(3000);
-}
+ server.start(process.env.PORT || 3000);

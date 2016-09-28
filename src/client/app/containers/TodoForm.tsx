@@ -13,6 +13,9 @@ class TodoForm extends React.Component<TodoFormPropsType, {value: string}>{
     super(props);
     this.state = { value: ''};
   }
+  componentDidMount() {
+    (this.refs['input'] as any).focus();
+  }
   handlerAddTodo(e) {
     this.props.addNewTodo(this.state.value);
     this.setState({value: ''});
@@ -22,10 +25,15 @@ class TodoForm extends React.Component<TodoFormPropsType, {value: string}>{
       value: e.target.value,
     });
   }
+  handlerEnter(e) {
+     if ('Enter' == e.key ) {
+       this.handlerAddTodo(e);
+    }
+  }
   render(){
     return (
       <div>
-        <input value={this.state.value} placeholder='Type something' onChange={this.onChange.bind(this)} />
+        <input onKeyPress={this.handlerEnter.bind(this)} ref='input' type="text" value={this.state.value} placeholder='Type something' onChange={this.onChange.bind(this)} />
         <button onClick={this.handlerAddTodo.bind(this)}> {`Add`} </button>
         <button onClick={this.props.reload}> {`Refresh`} </button>
       </div>

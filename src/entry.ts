@@ -4,7 +4,11 @@ import * as express from 'express';
 import * as mongoose from 'mongoose';
 import * as bodyParser from 'body-parser';
 import * as path from 'path';
-
+const hook = require('css-modules-require-hook');
+hook({
+  extensions: ['.scss'],
+  generateScopedName: '[name]__[local]'
+})
 var cors = require('cors');
 
 mongoose.connect('mongodb://localhost:27017/jobQuestAutumn2016');

@@ -6,11 +6,13 @@ import TodoForm from './containers/TodoForm';
 
 import Store from './Store';
 
+const styles = require('./Styles.scss');
+
 export default class TodoApp extends React.Component<{}, {}>{
   render() {
     return (
       <Provider store={Store}>
-        <div>
+        <div className={styles.container}>
           <TodoForm />
           <TodoList />
         </div>

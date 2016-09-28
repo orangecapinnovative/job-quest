@@ -2,6 +2,9 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import TodoItem from '../components/TodoItem';
 import * as TodoActions from '../actions/Todo.actions';
+
+const styles = require('./TodoList.scss');
+
 interface TodoListPropsType {
   todos: ITodo[];
   reload():void;
@@ -14,10 +17,13 @@ class TodoList extends React.Component<TodoListPropsType, {}>{
   }
   render(){
     return (
-      <div>
-        <div>
+      <div className={styles.container}>
+        <div className={styles.title}>
           {`Todo List`}
         </div>
+        {
+          this.props.todos.length ? null : <div className={styles.noTodo}>{'No todo'}</div>
+        }
         <ul>
         {
           this.props.todos.map( (i, k) => <TodoItem onDelete={this.props.handleDelete} onToggle={this.props.handleToggle} {...i} key={k} /> )

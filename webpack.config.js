@@ -12,8 +12,8 @@ module.exports = {
 
   module: {
     loaders: [{
-      test: /\.css$/,
-      loader: "style-loader!css-loader"
+      test: /\.scss$/,
+      loader: "style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]!postcss-loader!sass"
     }, {
       test: /\.tsx?$/,
       exclude: /node_modules/,
