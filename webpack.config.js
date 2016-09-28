@@ -2,12 +2,14 @@ var webpack = require("webpack");
 var path = require("path");
 module.exports = {
   context: __dirname,
-  entry: ['whatwg-fetch', "./src/client/app/TodoApp.tsx"],
+  entry: ['babel-polyfill', 'whatwg-fetch', "./src/client/app/TodoApp.tsx"],
   output: {
     path: path.join(__dirname, "dist"),
     publicPath: "/", // relative path for github pages
     filename: "bundle.js", // no hash in main.js because index.html is a static page
   },
+  devtool: 'inline-source-map',
+
   module: {
     loaders: [{
       test: /\.css$/,
@@ -29,7 +31,7 @@ module.exports = {
       'src',
       'node_modules'
     ],
-    extensions: ['', '.json', '.ts', '.tsx','.js', '.jsx'],
+    extensions: ['', '.json', '.ts', '.tsx', '.js', '.jsx'],
   },
   devServer: {
     contentBase: 'http://localhost:' + (3000),

@@ -9,22 +9,26 @@ export const reloadTodo = () => async (dispatch) => {
   const data = await TodoAgent.query();
   dispatch({
     type: RELOAD_TODO,
-    payload: data,
+    payload: data.payload,
   })
 }
 
-export const toogleTodoById = (id: number) => async (dispatch) => {
-    const todolist = await TodoAgent.toogle(id);
-    dispatch({
-      type: RELOAD_TODO,
-      payload: todolist,
-    })
+export const toggleTodoById = (id: number) => async (dispatch) => {
+    const data = await TodoAgent.toggle(id);
+    dispatch(reloadTodo());
+}
+
+export const deleteTodoById = (id: number) => async (dispatch) => {
+  const data = await TodoAgent.delete(id);
+  dispatch(reloadTodo());
 }
 
 export const createTodo = (title: string) => async (dispatch) => {
-  const todolist = await TodoAgent.add(title);
-  dispatch({
-    type: RELOAD_TODO,
-    payload: todolist
-  })
+
+  const data = await TodoAgent.add(title);
+  if(data.payload === 'Success')
+    dispatch(reloadTodo());
+  else {
+    alert(' Add failed' );
+  }
 }

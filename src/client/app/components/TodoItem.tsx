@@ -1,11 +1,15 @@
 import * as React from 'react';
 
 /** This is dumb component */
-export default (props: ITodo) => (
+interface TodoItemProps extends ITodo{
+  onToggle?(id: number);
+  onDelete?(id: number);
+}
+export default (props: TodoItemProps) => (
   <li
     style={{ textDecoration: props.done ? 'line-through' : 'initial' }}
-    onClick={this.toggle.bind(this, props._id)}>
+    onClick={() => props.onToggle(props._id)}>
     {props.title}
-    <button onClick={this.delete.bind(this, props._id)}>Delete</button>
+    <button onClick={() => props.onDelete(props._id)}>Delete</button>
   </li>
 )

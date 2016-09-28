@@ -13,19 +13,19 @@ class TodoForm extends React.Component<TodoFormPropsType, {value: string}>{
     super(props);
     this.state = { value: ''};
   }
-  handlerAddTodo() {
-    console.log('create');
+  handlerAddTodo(e) {
     this.props.addNewTodo(this.state.value);
+    this.setState({value: ''});
   }
   onChange(e) {
     this.setState({
       value: e.target.value,
-    })
+    });
   }
   render(){
     return (
       <div>
-        <input placeholder='Type something' onChange={this.onChange.bind(this)} />
+        <input value={this.state.value} placeholder='Type something' onChange={this.onChange.bind(this)} />
         <button onClick={this.handlerAddTodo.bind(this)}> {`Add`} </button>
         <button onClick={this.props.reload}> {`Refresh`} </button>
       </div>
@@ -44,7 +44,6 @@ const mapDispatch = (dispatch) => (
       dispatch(TodoActions.createTodo(title));
     },
     reload: () => {
-      console.log('what');
       dispatch(TodoActions.reloadTodo());
     }
   }

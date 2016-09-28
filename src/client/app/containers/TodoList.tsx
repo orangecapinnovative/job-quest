@@ -5,9 +5,11 @@ import * as TodoActions from '../actions/Todo.actions';
 interface TodoListPropsType {
   todos: ITodo[];
   reload():void;
+  handleDelete(id: number): void;
+  handleToggle(id: number): void;
 }
 class TodoList extends React.Component<TodoListPropsType, {}>{
-  componentWillReceiveProps(){
+  componentDidMount(){
     this.props.reload();
   }
   render(){
@@ -18,7 +20,7 @@ class TodoList extends React.Component<TodoListPropsType, {}>{
         </div>
         <ul>
         {
-          this.props.todos.map( (i, k) => <TodoItem {...i} key={k} /> )
+          this.props.todos.map( (i, k) => <TodoItem onDelete={this.props.handleDelete} onToggle={this.props.handleToggle} {...i} key={k} /> )
         }
         </ul>
       </div>
@@ -34,8 +36,13 @@ const mapState = (state: AppState) => (
 const mapDispatch = (dispatch) => (
   {
     reload: () => {
-      console.log('dispatch');
       dispatch(TodoActions.reloadTodo());
+    },
+    handleToggle: (id) => {
+      dispatch(TodoActions.toggleTodoById(id));
+    },
+    handleDelete: (id) => {
+      dispatch(TodoActions.deleteTodoById(id));
     }
   }
 )

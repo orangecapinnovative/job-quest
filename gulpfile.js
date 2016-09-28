@@ -27,11 +27,20 @@ gulp.task('serve', ['compile','webpack'], function() {
   
 });
 
+gulp.task('build', ['compile'], function(){
+   webpack(config, function (err, stats) {
+    if (err) throw new gutil.PluginError("webpack", err);
+    gutil.log("[webpack]", stats.toString({
+      // output options
+    }));
+  });
+});
+
 gulp.task('webpack', function(){
     new webpackDevServer(webpack(config), config.devServer).listen(3000, function() {
       console.log('webpack server run at ' + 3000);
     });
-})
+});
 gulp.task('compile', function() {
   var tsProject = ts.createProject('./tsconfig.json');
   return gulp.src([`./src/**/*.ts*`], {

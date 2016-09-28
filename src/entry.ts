@@ -24,6 +24,7 @@ app.get('/api', (req, res) => res.send('Hi, fork'));
 
 app.use('/api/todo',require('./api/index').Router());
 app.use(require('./client/index').Router());
+app.use('/dist', express.static(path.join(__dirname)))
 
 export function start(port){
   app.listen(port, function(){
