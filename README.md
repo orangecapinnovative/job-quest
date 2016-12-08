@@ -17,3 +17,32 @@ TODO:
   - Implemented features should have same behavior but enhancements are welcome. (e.g. input validation)
   - Local CSS (CSS Module) is preferred.
   - It looks like the code is not in the strict format. Please do something to make sure that everyone in the team is writing code in the same format.
+
+
+
+Refactor Description:
+---
+- Re-stucture backend code to MVC structure
+- Use Promise for backend code
+- Add Input Validation
+- Use Sass for CSS
+- Integrate CSS Loader Module
+- Custom UI/UX for frontend page
+
+PS. Code Indentation = 4 spaces (1 tab)
+
+Additional Node Modules:
+---
+- bruebird (Promise)
+- fs
+- joi (Validator)
+- lodash
+- sass-loader
+- webpack
+- webpack-windows (For Microsoft Windows)
+- node-sass (For Dev Dependency)
+- sass-loader (For Dev Dependency)
+
+Refactor Code By:
+---
+Tanawin Samutsin
