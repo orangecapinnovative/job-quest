@@ -25,6 +25,8 @@ Refactor Description:
 - Re-stucture backend code to MVC structure
 - Use Promise for backend code
 - Add Input Validation
+- Re-route for API
+- Use only port 3000 (default port) for both frontend/backend
 - Use Sass for CSS
 - Integrate CSS Loader Module
 - Custom UI/UX for frontend page (Using Material UI Components)
