@@ -1,0 +1,47 @@
+@import 'variables';
+
+body {
+	background-image:	url('/images/paper-wallpaper.jpg') ;
+	background-repeat:	repeat-y;
+}
+
+ul {
+	list-style: square;
+}
+
+li {
+	font-size:		18px;
+	margin-bottom:	75px;
+}
+
+p {
+	word-wrap: break-word;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.alert {
+	color:		$color_red;
+	font-size:	18px;
+}
+
+.card {
+	max-width:	600px;
+	margin:		auto;
+}
+
+.todo-undone {
+	text-decoration:	initial;
+	color:				$color_black;
+}
+
+.todo-done {
+	text-decoration:	line-through;
+	color:				$color_green;
+}
