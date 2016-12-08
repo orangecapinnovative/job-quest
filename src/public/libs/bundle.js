@@ -22184,7 +22184,7 @@
 						_react2.default.createElement(
 							_Card.CardText,
 							null,
-							_react2.default.createElement(
+							this.state.todos.length > 0 ? _react2.default.createElement(
 								'ul',
 								null,
 								this.state.todos && this.state.todos.map(function (todo) {
@@ -22206,6 +22206,14 @@
 										_react2.default.createElement('hr', null)
 									);
 								})
+							) : _react2.default.createElement(
+								'div',
+								{ className: 'center' },
+								_react2.default.createElement(
+									'p',
+									{ className: 'alert' },
+									'There\'s nothing on your list !'
+								)
 							)
 						)
 					)

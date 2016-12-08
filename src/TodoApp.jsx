@@ -144,23 +144,31 @@ export default class TodoApp extends React.Component {
 			<Card className="card">
 				<CardTitle subtitle="My to-do List" />
 				<CardText>
-					<ul>
-						{
-							this.state.todos && this.state.todos.map((todo) =>
-								<li key={ todo._id }>
-									<p className={ todo.done ? 'todo-done' : 'todo-undone' }>
-										{ todo.title }
-									</p>
-									<div className="right">
-										<RaisedButton label={ todo.done ? 'Mark as undone' : 'Mark as done' } primary={true} onClick={ this.toggle.bind(this, todo._id) } />
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										<RaisedButton label="Delete" secondary={true} onClick={ this.delete.bind(this, todo._id) } />
-									</div>
-									<hr />
-								</li>
-							)
-						}
-					</ul>
+					{this.state.todos.length > 0 ? (
+						<ul>
+							{
+								this.state.todos && this.state.todos.map((todo) =>
+									<li key={ todo._id }>
+										<p className={ todo.done ? 'todo-done' : 'todo-undone' }>
+											{ todo.title }
+										</p>
+										<div className="right">
+											<RaisedButton label={ todo.done ? 'Mark as undone' : 'Mark as done' } primary={true} onClick={ this.toggle.bind(this, todo._id) } />
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<RaisedButton label="Delete" secondary={true} onClick={ this.delete.bind(this, todo._id) } />
+										</div>
+										<hr />
+									</li>
+								)
+							}
+						</ul>
+					) : (
+						<div className="center">
+							<p className="alert">
+								There's nothing on your list !
+							</p>
+						</div>
+					)}
 				</CardText>
 			</Card>
 		</div>;
