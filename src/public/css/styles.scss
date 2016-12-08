@@ -1,0 +1,11 @@
+@import 'variables';
+
+body {
+	background-color:	$color_black;
+	color:				$color_white;
+}
+
+.alert {
+	color:		$color_red;
+	font-size:	14px;
+}
