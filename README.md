@@ -27,9 +27,13 @@ Refactor Description:
 - Add Input Validation
 - Use Sass for CSS
 - Integrate CSS Loader Module
-- Custom UI/UX for frontend page
+- Custom UI/UX for frontend page (Using Material UI Components)
 
 PS. Code Indentation = 4 spaces (1 tab)
+
+Additional React Component:
+---
+- Material-UI (For React)
 
 Additional Node Modules:
 ---

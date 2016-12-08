@@ -1,5 +1,10 @@
 import React from 'react';
 import 'whatwg-fetch';
+import TextField from 'material-ui/TextField';
+import {Card, CardTitle, CardText} from 'material-ui/Card';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentAdd from 'material-ui/svg-icons/content/add';
+import RaisedButton from 'material-ui/RaisedButton';
 import styles from './public/css/styles.scss';
 
 export default class TodoApp extends React.Component {
@@ -97,7 +102,7 @@ export default class TodoApp extends React.Component {
 		}
 		else {
 			this.setState({
-				alert: 'Please enter your new to-do !'
+				alert: 'Your new to-do cannot be blank !'
 			})
 		}
 	}
@@ -110,28 +115,54 @@ export default class TodoApp extends React.Component {
 
 	render() {
 		return <div>
-			<div>
-				<p className="alert">
-					{ this.state.alert }
-				</p>
-				<input type="text" onChange={ this.newTodoChange } value={ this.state.newTodo } required />
-				<button onClick={ this.add.bind(this, this.state.newTodo) }>
-					Add
-				</button>
-			</div>
-			<ul>
-				{
-					this.state.todos && this.state.todos.map((todo) =>
-						<li key={ todo._id } style={{ textDecoration: todo.done ? 'line-through' : 'initial' }} onClick={ this.toggle.bind(this, todo._id) }>
-							{ todo.title }
-							&nbsp;&nbsp;&nbsp;
-							<button onClick={ this.delete.bind(this, todo._id) }>
-								Delete
-							</button>
-						</li>
-					)
-				}
-			</ul>
+			<Card className="card">
+				<CardTitle title="TODO APP" subtitle="takemetour/job-quest | Refactor By Tanawin Samutsin" />
+				<CardText>
+					<div className="center">
+						<p className="alert">
+							{ this.state.alert }
+						</p>
+					</div>
+					<div>
+						<TextField
+							floatingLabelText="Enter your new to-do here !"
+							fullWidth={true}
+							multiLine={true}
+							rows={1}
+							onChange={ this.newTodoChange }
+							value={ this.state.newTodo }
+						/>
+					</div>
+					<div className="center">
+						<FloatingActionButton onClick={ this.add.bind(this, this.state.newTodo) }>
+							<ContentAdd />
+						</FloatingActionButton>
+					</div>
+				</CardText>
+			</Card>
+			<br /><br />
+			<Card className="card">
+				<CardTitle subtitle="My to-do List" />
+				<CardText>
+					<ul>
+						{
+							this.state.todos && this.state.todos.map((todo) =>
+								<li key={ todo._id }>
+									<p className={ todo.done ? 'todo-done' : 'todo-undone' }>
+										{ todo.title }
+									</p>
+									<div className="right">
+										<RaisedButton label={ todo.done ? 'Mark as undone' : 'Mark as done' } primary={true} onClick={ this.toggle.bind(this, todo._id) } />
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<RaisedButton label="Delete" secondary={true} onClick={ this.delete.bind(this, todo._id) } />
+									</div>
+									<hr />
+								</li>
+							)
+						}
+					</ul>
+				</CardText>
+			</Card>
 		</div>;
 	}
 }

@@ -23,7 +23,6 @@ mongoose.Promise = Promise;
 mongoose.connect(config.db.mongodb);
 
 
-
 // Initialize App
 var app	= express();
 
@@ -34,9 +33,7 @@ app.use(function(req, res, next) {
 	next();
 });
 app.use(bodyParser.json())
-
-
-// Load Lib(s)
+app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/public/libs'));
 
 
