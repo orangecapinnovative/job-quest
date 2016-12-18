@@ -34,7 +34,7 @@ app.delete('/:id', function(req,res) {
   Todo.remove({_id:req.params.id},function() {
     res.send({msg:"deleted"});
   });
-})
+});
 
 app.post('/:id/toggle', function(req,res) {
   Todo.findById(req.params.id, function(err, todo) {
@@ -44,8 +44,20 @@ app.post('/:id/toggle', function(req,res) {
       Todo.findByIdAndUpdate(req.params.id, {done:true}, function(){res.send({message:'success'})});
     }
   })
-})
+});
+
+app.post('/toggleAll', function(req, res) {
+  Todo.update({}, {done: req.body.checkedAll}, {multi: true}, function () {
+    res.send({message: 'success'})
+  });
+});
+
+app.get('/filter/:type', function(req,res) {
+  Todo.find({done: req.params.type === 'done'}, function(err, todos) {
+    res.send(todos)
+  });
+});
 
 app.listen(3001,function(){
   console.log('[API] listening to port '+ 3001);
-})
+});

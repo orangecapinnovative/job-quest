@@ -1,0 +1,137 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+$fa-font-path: "~font-awesome/fonts";
+@import "../node_modules/font-awesome/scss/font-awesome";
+
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+
+html {}
+
+body {
+    background: #f8f8f8;
+    font-family: 'Dancing Script', sans-serif;
+}
+
+#mount-point {
+    width: 600px;
+    margin: 30px auto 0;
+}
+
+.todoApp {
+    &__header {
+        @extend .clearfix;
+        background: #ffffff;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 2px 5px 0 #bcbcbc;
+
+        &--title {
+            text-align: center;
+            font-size: 28px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #c3c3c3;
+        }
+
+        .todoInput {
+            &__input {
+                width: 100%;
+                font-size: 24px;
+                padding: 6px 12px;
+                border: 0;
+                border-bottom: 1px dotted #c3c3c3;
+                &:focus, &:active {
+                    outline: none;
+                }
+
+                &.error {
+                    border-bottom-color: #ff2a37;
+
+                    &::-webkit-input-placeholder {
+                        color: #ff2a37;
+                    }
+                    &::-moz-placeholder {
+                        color: #ff2a37;
+                    }
+                    &:-moz-placeholder {
+                        color: #ff2a37;
+                    }
+                    &:-ms-input-placeholder {
+                        color: #ff2a37;
+                    }
+
+                }
+            }
+        }
+
+        .todoFilter {
+            float: right;
+            list-style: none;
+            display: inline;
+            padding: 0;
+            margin: 15px 0 0 0;
+
+            > li {
+                display: inline;
+                padding: 0 8px;
+
+                a {
+                    font-size: 18px;
+                    color: #c3c3c3;
+                    text-decoration: none;
+                    cursor: pointer;
+
+                    &:hover, &.active {
+                        color: #2571ff;
+                    }
+                }
+            }
+        }
+    }
+    &__list {
+        margin-top: 15px;
+        padding: 0px;
+        list-style: none;
+
+        &__item {
+            @extend .clearfix;
+            background: #ffffff;
+            border-radius: 5px;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px 0 #bcbcbc;
+            margin-bottom: 10px;
+            font-size: 20px;
+            position: relative;
+
+            label {
+                white-space: normal;
+                word-break: break-word;
+                width: 450px;
+                margin-left: 30px;
+
+                &.done {
+                    text-decoration: line-through;
+                    color: #c3c3c3;
+                }
+            }
+            .flag {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }
+            .btn-delete {
+                @extend .pull-right;
+                background: none;
+                cursor: pointer;
+                border: none;
+                &:focus, &:active {
+                    outline: none;
+                }
+
+                i {
+                    color: #ff2a37;
+                }
+            }
+        }
+    }
+
+}
